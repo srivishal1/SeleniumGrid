@@ -1,4 +1,6 @@
-# SeleniumGrid contains a basic framework to run automaiton scripts in parallel using Selenium Grid 
+# SeleniumGrid -
+
+This project contains a basic framework to run automaiton scripts in parallel using Selenium Grid 
 
 Below documentation contains step by step guide to setup Selenium Grid Infra Structure on AWS
 
