@@ -6,9 +6,9 @@
       <class name="testcase.homePageTestCase"/>
     </classes>
   </test> <!-- Test -->
-<test name="Test2">
-    <classes>
-      <class name="testcase.homePageTestCase"/>
-    </classes>
-  </test> <!-- Test -->
+<!--<test name="Test2">-->
+<!--    <classes>-->
+<!--      <class name="testcase.homePageTestCase"/>-->
+<!--    </classes>-->
+<!--  </test> &lt;!&ndash; Test &ndash;&gt;-->
 </suite> <!-- Suite -->

@@ -22,15 +22,26 @@ public class startDriver {
 	driverFunctions driverFunc;
 	
 	public synchronized WebDriver startDriver(String browserType) throws Exception {
-		String gridIp = configManager.getProperties().getProperty("SeleniumGridHubIP");
-		String gridPort = configManager.getProperties().getProperty("port");
-		if(System.getProperty("SeleniumGridHubIP")!=null) {
-			gridIp = System.getProperty("SeleniumGridHubIP");
-			gridPort = System.getProperty("port");
-		}
-		objCapabilities = new DesiredCapabilities();
-		objCapabilities.setBrowserName("chrome");
-		driver = new RemoteWebDriver(new URL("http://"+gridIp+":"+gridPort),objCapabilities);
+//		String gridIp = configManager.getProperties().getProperty("SeleniumGridHubIP");
+//		String gridPort = configManager.getProperties().getProperty("port");
+//		if(System.getProperty("SeleniumGridHubIP")!=null) {
+//			gridIp = System.getProperty("SeleniumGridHubIP");
+//			gridPort = System.getProperty("port");
+//		}
+//		objCapabilities = new DesiredCapabilities();
+//		objCapabilities.setBrowserName("chrome");
+//		driver = new RemoteWebDriver(new URL("http://"+gridIp+":"+gridPort),objCapabilities);
+
+		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless");
+		options.addArguments("--disable-gpu");
+		options.addArguments("disable-infobars");
+		options.addArguments("--disable-extensions");
+		options.addArguments("window-size=1200x600");
+		options.addArguments("--no-sandbox");
+		driver = new ChromeDriver(options);
+
 		commonVariables.setDriver(driver);
 		commonVariables.setDriverFunctionLib(new driverFunctions());
 		commonVariables.setCommonFunctionLib(new commonFunctions()) ;
