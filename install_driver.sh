@@ -1,3 +1,5 @@
+#!/bin/sh
+
 wget -N https://chromedriver.storage.googleapis.com/104.0.5112.20/chromedriver_linux64.zip -P ~/
 unzip ~/chromedriver_linux64.zip -d ~/
 rm ~/chromedriver_linux64.zip
