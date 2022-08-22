@@ -18,4 +18,4 @@ phases:
   build:
     commands:
       - echo Stating build phase
-      - mvn clean test
+      - mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
