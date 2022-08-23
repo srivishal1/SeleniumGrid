@@ -22,7 +22,7 @@ phases:
   post_build:
     commands:
       - echo Post Build Started successfully on `date`
-      - aws s3 cp logs/Results/GlobalReport.html s3://codepipeline-ap-south-1-781882469030 --recursive
+      - aws s3 cp logs/Results/GlobalReport.html s3://codepipeline-ap-south-1-781882469030
       - echo Build completed on `date`
 artifacts:
   files:
