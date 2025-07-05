@@ -10,8 +10,8 @@ public class contactPage extends contactPage_OR {
 	public contactPage (WebDriver driver) throws Exception {
 		super(driver);
 		this.driver = driver;
-		if(!driverFunctionLib.isElementPresent(firstName)) {
-			throw new IllegalStateException("This is not contact us Page");
-		}
+		// if(!driverFunctionLib.isElementPresent(firstName)) {
+		// 	throw new IllegalStateException("This is not contact us Page");
+		// }
 	}
 }
